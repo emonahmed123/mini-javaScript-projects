@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch</title>
+  </head>
+  <body>
+    <div class="MyWatch">
+      <span class="H"></span>
+      <span class="M"></span>
+      <span class="date"></span>
+      <span class="Year"></span>
+    </div>
+
+    <script>
+      const myTime = () => {
+        mydate = new Date();
+
+        let hr;
+
+        let min =
+          mydate.getMinutes() > 10
+            ? "0" + mydate.getMinutes()
+            : mydate.getMinutes();
+
+        let sec = mydate.getSeconds()
+          ? "0" + mydate.getSeconds()
+          : mydate.getSeconds();
+        let M = mydate.getHours() >= 12 ? "PM" : "AM";
+
+        if (mydate.getHours() == 0) {
+          hr = 12;
+        } else if (mydate.getHours() > 12) {
+          hr = mydate.getHours() - 12;
+        } else {
+          hr = mydate.getHours();
+        }
+
+        let currentTime = hr + ":" + min + ":" + sec;
+
+        document.getElementsByClassName("H")[0].innerHTML = currentTime;
+
+        document.getElementsByClassName("M")[0].innerHTML = M;
+
+        let myday = [
+          "Sunday",
+          "Monday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        let day = mydate.getDate();
+
+        let currentDate = myday[mydate.getDay()] + " " + day;
+        document.getElementsByClassName("date")[0].innerHTML = currentDate;
+        let Myyear = mydate.getFullYear();
+
+        document.getElementsByClassName("Year")[0].innerHTML = Myyear;
+      };
+
+      myTime();
+    </script>
+  </body>
+</html>
