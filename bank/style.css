@@ -1,0 +1,16 @@
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.h-one{
+    font-size: 30px;
+    color: blue;
+
+}
+
+.Input{
+ width: 300px;
+ padding: 10px;
+ margin-bottom: 10px;
+}

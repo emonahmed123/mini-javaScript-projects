@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Calculator</title>
   </head>
   <body>
     <div class="calculatorBody">
       <table>
         <tr>
-          <td colspan="4"><input type="text" id="MyResult" /></td>
+          <td colspan="4"><input type="text" readonly id="MyResult" /></td>
         </tr>
 
         <tr>
           <td><input type="button" value="C" onclick="DeleteMe()" /></td>
           <td><input type="button" value="(" onclick="calculator('(')" /></td>
-          <td><input type="button" value=")" onclick="calculator(')')" /></td>
+          <td><input type="button" value=")" onclick="calculator(')') " /></td>
           <td><input type="button" value=" " onclick="calculator('')" /></td>
         </tr>
         <tr>
@@ -46,5 +47,12 @@
         </tr>
       </table>
     </div>
+
+    <script>
+      function calculator(NewValue) {
+        document.getElementById("MyResult").value += NewValue;
+      }
+      calculator();
+    </script>
   </body>
 </html>

@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f1f1f1;
+    height: 100vh;
+}
+
+
+.AppBody{
+    border: 3px dotted red;
+    width: 700px;
+    height: 500px;
+    background-color: #ffffff;
+    box-shadow: rgb(0,0,0,0.1) 0px 10px 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.AppBody .active{
+    border: 3px solid rgb(83, 83, 222);
+}
+
+.icon{
+    margin-bottom: 10px;
+}
+.AppBody h1{
+    margin-bottom: 10px;
+}
+.AppBody span{
+    margin-bottom: 10px;
+}
+
+.AppBody button{
+    padding: 10px 25px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: #ffff;
+    color: rebeccapurple;
+    border-radius: 5px;
+    cursor: pointer;
+}.AppBody img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
