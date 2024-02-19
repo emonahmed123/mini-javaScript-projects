@@ -99,6 +99,17 @@
       function binary(e) {
         e.preventDefault();
         console.log("hello");
+        const num = document.getElementById("number").value;
+
+        if (num === "") {
+          alert("input number");
+        } else if (num < 0) {
+          alert("input positive number");
+        }
+
+        binaryNumber = Number(num).toString(2);
+        result.style.FontSize = "50px";
+        result.innerText = binaryNumber;
       }
 
       submit.addEventListener("click", binary);
