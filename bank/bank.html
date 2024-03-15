@@ -13,14 +13,23 @@
         <h1 class="h-one">Insede Bank</h1>
 
         <form action="">
-          <div>
-            <input class="Input" type="email" id="user-email" />
-          </div>
-          <div>
-            <input class="Input" type="password" id="user-password" />
-          </div>
+          <div style="display: flex; column-gap: 10px">
+            <div>
+              <h3>widthdraw</h3>
+              <input class="Input" type="email" id="user-email" />
+              <button style="display: block" id="button-withdraw">
+                withdraw
+              </button>
+            </div>
 
-          <button id="button-sub">submit</button>
+            <div>
+              <h3>Deposit</h3>
+              <input class="Input" type="password" id="user-password" />
+              <button style="display: block" id="button-deposit">
+                Deposit
+              </button>
+            </div>
+          </div>
         </form>
       </div>
     </main>
