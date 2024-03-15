@@ -12,11 +12,36 @@
       <div class="container">
         <h1 class="h-one">Insede Bank</h1>
 
+        <div
+          style="
+            display: flex;
+            column-gap: 40px;
+            background: #d90707;
+            justify-content: center;
+          "
+        >
+          <div>
+            <h3>Deposite</h3>
+
+            <p>$ <span id="deposit-total">0</span></p>
+          </div>
+          <div>
+            <h3>widthdraw</h3>
+
+            <p>10$</p>
+          </div>
+
+          <div>
+            <h3>Blance</h3>
+            <p>$ <span id="total-blance">0</span></p>
+          </div>
+        </div>
+
         <form action="">
           <div style="display: flex; column-gap: 10px">
             <div>
               <h3>widthdraw</h3>
-              <input class="Input" type="email" id="user-email" />
+              <input class="Input" type="text" id="widthdraw-feild" />
               <button style="display: block" id="button-withdraw">
                 withdraw
               </button>
@@ -24,7 +49,7 @@
 
             <div>
               <h3>Deposit</h3>
-              <input class="Input" type="password" id="user-password" />
+              <input class="Input" type="text" id="deposit-feild" />
               <button style="display: block" id="button-deposit">
                 Deposit
               </button>
@@ -33,5 +58,7 @@
         </form>
       </div>
     </main>
+
+    <script src="mange.js"></script>
   </body>
 </html>
