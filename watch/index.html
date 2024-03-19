@@ -20,13 +20,14 @@
         let hr;
 
         let min =
-          mydate.getMinutes() > 10
+          mydate.getMinutes() < 10
             ? "0" + mydate.getMinutes()
             : mydate.getMinutes();
 
-        let sec = mydate.getSeconds()
-          ? "0" + mydate.getSeconds()
-          : mydate.getSeconds();
+        let sec =
+          mydate.getSeconds() < 10
+            ? "0" + mydate.getSeconds()
+            : mydate.getSeconds();
         let M = mydate.getHours() >= 12 ? "PM" : "AM";
 
         if (mydate.getHours() == 0) {
@@ -60,7 +61,9 @@
         document.getElementsByClassName("Year")[0].innerHTML = Myyear;
       };
 
-      myTime();
+      setInterval(() => {
+        myTime();
+      }, 1000);
     </script>
   </body>
 </html>

@@ -36,4 +36,12 @@ document.getElementById('button-deposit').addEventListener('click', function (e)
 
     const newDpositTotal = priviourDepositeTotal + newDepositAmount
     seTextElementValuById('deposit-total', newDpositTotal)
+
+    const previousBalanceTotal = getTextElementValueById('total-blance')
+
+    const newBalanceTotal = previousBalanceTotal + newDepositAmount
+
+    seTextElementValuById('total-blance', newBalanceTotal)
+
+
 })

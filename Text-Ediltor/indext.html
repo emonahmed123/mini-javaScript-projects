@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Text Editor</title>
+
+    <style>
+      .bal {
+        font-weight: bold;
+      }
+      .Itacli {
+        font-style: italic;
+      }
+
+      .text_centers {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-blue-500 py-5 px-5 max-w-[1170px] mx-auto mt-10 shawdow-lg">
+      <h1 class="text-[40px] text-center leading-[50px]">Sample Text Editor</h1>
+
+      <div class="mt-10 max-w-[500px] mx-auto">
+        <button
+          id="Blod"
+          class="bg-red-400 px-5 py-1 rounded-[10px] text-[16px] font-semibold"
+        >
+          Blod
+        </button>
+        <button
+          id="Italic"
+          class="bg-red-400 px-5 py-1 rounded-[10px] text-[16px] font-semibold"
+        >
+          Italic
+        </button>
+        <button
+          id="text-center"
+          class="bg-red-400 px-5 py-1 rounded-[10px] text-[16px] font-semibold"
+        >
+          text_center
+        </button>
+
+        <input id="color" type="Color" />
+      </div>
+
+      <div class="max-w-[670px] mt-5 mx-auto flex justify-center">
+        <label for="" class="form-label"></label>
+        <textarea
+          class="rounded-[10px] px-5 w-[700px]"
+          name=""
+          id="TextEidtor"
+        ></textarea>
+      </div>
+    </div>
+
+    <script src="./text-Editor.js"></script>
+  </body>
+</html>
