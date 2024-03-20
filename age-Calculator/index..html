@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <div class="max-w-[1170px] mx-auto">
+      <h1 class="text-[30px]">Age Calculator</h1>
+      <div class="py-5">
+        <label for="yearsIn">Year</label>
+        <input
+          class="py-5 px-5 border border-red-900"
+          placeholder="Year"
+          type="text"
+          id="yearsIn"
+        />
+      </div>
+
+      <div class="py-5">
+        <label for="MonthIn">Month</label>
+        <input
+          placeholder="MonthIn"
+          class="py-5 px-5 border border-red-900"
+          type="text"
+          id="monthIn"
+        />
+      </div>
+      <div>
+        <label for="dates">Date</label>
+        <input
+          class="py-5 px-5 border border-red-900"
+          type="text"
+          id="dateIn"
+          placeholder="Date"
+        />
+      </div>
+
+      <button id="Btn" class="border border-red-900 mt-5 mb-5">Button</button>
+
+      <div>
+        <h3><span id="years">00</span> Year</h3>
+        <h3><span id="month">00</span> Month</h3>
+        <h3><span id="date">00</span> Date</h3>
+      </div>
+    </div>
+    <script src="./calculator.js"></script>
+  </body>
+</html>
