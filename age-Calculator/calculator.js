@@ -32,10 +32,10 @@ document.getElementById('Btn').addEventListener('click', function () {
     const myYears = NowYear - yearInValue.value;
     const MyMonth = NowMonth - monthInValue.value;
     const MyDate = NowDay - dateInValue.value;
-    console.log(myYears)
-    console.log(MyMonth)
-    console.log(MyDate)
 
+    years.innerText = myYears;
+    month.innerText = MyMonth;
+    date.innerText = MyDate
 
 });
 
