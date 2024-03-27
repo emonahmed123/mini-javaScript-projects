@@ -59,6 +59,55 @@
               </button>
             </div>
           </div>
+          <!-- card 2 -->
+          <div class="border px-2 py-2">
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Green_equilateral_triangle_point_up.svg/2363px-Green_equilateral_triangle_point_up.svg.png"
+                alt="Triangle"
+              />
+            </div>
+
+            <div>
+              <h2 class="text-2xl">Rectangle</h2>
+              <p>Area(A)=w x l</p>
+
+              <div class="flex gap-x-2">
+                <p>
+                  <input
+                    class="border border-red-200 w-20 px-2"
+                    type="text"
+                    name=""
+                    id="Rectangle-width"
+                    placeholder="width"
+                  />
+
+                  <span class="text-sm">cm</span>
+                </p>
+                <p>
+                  <input
+                    class="border border-red-200 w-20 px-2"
+                    type="text"
+                    name=""
+                    id="rectangle-length"
+                    placeholder="length"
+                  />
+
+                  <span class="text-sm">cm</span>
+                </p>
+              </div>
+              <p class="mb-2 text-md">
+                Area: <span id="rectangle-area"></span>
+              </p>
+
+              <button
+                onclick="calculateRectangleArea()"
+                class="py-2 w-full border bg-blue-500"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
         </div>
 
         <div class="w-[400px]">
