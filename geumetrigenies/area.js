@@ -19,6 +19,7 @@ function calculateArea() {
 
     setTextValue('triangle-area', area)
 
+    addToCalculationEntry('Triangel', area)
 
 }
 function calculateRectangleArea() {
@@ -54,4 +55,18 @@ function getInuptValue(InputId) {
 function setTextValue(InnerText, area) {
     const textElment = document.getElementById(InnerText)
     textElment.innerText = area
+}
+
+
+// add to calculation entry
+
+function addToCalculationEntry(areaType, area) {
+
+    const calculatoinEntry = document.getElementById('calcutator-entry');
+
+    let count = calculatoinEntry.childElementCount
+    const p = document.createElement('p')
+    p.innerHTML = `${count + 1} areaType + ' ' + area`;
+
+    calculatoinEntry.appendChild(p)
 }
