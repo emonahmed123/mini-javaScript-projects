@@ -13,11 +13,45 @@
       <div class="flex flex-col lg:flex-row">
         <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-x-5">
           <!-- card 1 -->
-          <div>
-            <div><img src="" alt="Triangle" /></div>
+          <div class="border px-2 py-2">
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Green_equilateral_triangle_point_up.svg/2363px-Green_equilateral_triangle_point_up.svg.png"
+                alt="Triangle"
+              />
+            </div>
 
             <div>
-              <h2>Triangle</h2>
+              <h2 class="text-2xl">Triangle</h2>
+              <p>Area(A)=0.5 x b x h</p>
+
+              <div class="flex gap-x-2">
+                <p>
+                  <input
+                    class="border border-red-200 w-20 px-2"
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="base"
+                  />
+
+                  <span class="text-sm">cm</span>
+                </p>
+                <p>
+                  <input
+                    class="border border-red-200 w-20 px-2"
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="base"
+                  />
+
+                  <span class="text-sm">cm</span>
+                </p>
+              </div>
+              <p class="mb-2 text-md">Area:</p>
+
+              <button class="py-2 w-full border bg-blue-500">Calculate</button>
             </div>
           </div>
         </div>
@@ -27,5 +61,7 @@
         </div>
       </div>
     </main>
+
+    <script src="./area.js"></script>
   </body>
 </html>
