@@ -19,16 +19,14 @@ function calculateArea() {
 
 }
 function calculateRectangleArea() {
-    const widthField = document.getElementById('Rectangle-width');
-    const widthValueText = widthField.value
-    const width = parseFloat(widthValueText)
+
+    const width = getInuptValue('Rectangle-width')
 
 
     // get triangel height value;
 
-    const lengthField = document.getElementById('rectangle-length');
-    const lengthValueText = lengthField.value;
-    const length = parseFloat(lengthValueText)
+
+    const length = getInuptValue('rectangle-length')
 
 
     const area = width * length;
