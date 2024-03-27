@@ -1,14 +1,14 @@
 function calculateArea() {
-    const baseField = document.getElementById('triangle-base');
-    const baseValueText = baseField.value
-    const base = parseFloat(baseValueText)
+
+
+    const base = getInuptValue('triangle-base')
 
 
     // get triangel height value;
 
-    const heightField = document.getElementById('triangle-height');
-    const heightValueText = heightField.value;
-    const height = parseFloat(heightValueText)
+    // const heightField = document.getElementById(
+    // const heightValueText = heightField.value;
+    const height = getInuptValue('triangle-height')
     console.log(height)
 
     const area = 0.5 * base * height;
@@ -36,5 +36,15 @@ function calculateRectangleArea() {
     const reaiangelArea = document.getElementById('rectangle-area');
 
     reaiangelArea.innerText = area
+
+}
+
+function getInuptValue(InputId) {
+
+    const InputFeild = document.getElementById(InputId);
+    const InputValueText = InputFeild.value;
+    const Input = parseFloat(InputValueText)
+
+    return Input
 
 }
