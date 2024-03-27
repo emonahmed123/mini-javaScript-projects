@@ -11,11 +11,14 @@ function calculateArea() {
     const height = getInuptValue('triangle-height')
     console.log(height)
 
+    if (isNaN(base) || isNaN(height)) {
+        alert('please provide Number')
+        return
+    }
     const area = 0.5 * base * height;
 
-    const triangelArea = document.getElementById('triangle-area');
+    setTextValue('triangle-area', area)
 
-    triangelArea.innerText = area
 
 }
 function calculateRectangleArea() {
@@ -31,9 +34,8 @@ function calculateRectangleArea() {
 
     const area = width * length;
 
-    const reaiangelArea = document.getElementById('rectangle-area');
 
-    reaiangelArea.innerText = area
+    setTextValue('rectangle-area', area)
 
 }
 
@@ -45,4 +47,11 @@ function getInuptValue(InputId) {
 
     return Input
 
+}
+
+
+
+function setTextValue(InnerText, area) {
+    const textElment = document.getElementById(InnerText)
+    textElment.innerText = area
 }
