@@ -66,7 +66,7 @@ function addToCalculationEntry(areaType, area) {
 
     let count = calculatoinEntry.childElementCount
     const p = document.createElement('p')
-    p.innerHTML = `${count + 1} areaType + ' ' + area`;
+    p.innerHTML = `${count + 1} ${areaType}  ${area}`;
 
     calculatoinEntry.appendChild(p)
 }
