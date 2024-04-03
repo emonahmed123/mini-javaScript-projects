@@ -7,6 +7,14 @@ function fecthData() {
 }
 
 function loadData(params) {
+    let Container = document.getElementById('container')
+    for (user of params) {
 
-    console.log(params)
+        let h1 = document.createElement('h3')
+        h1.innerText = `${user.name}`
+
+        Container.appendChild(h1)
+
+
+    }
 }
