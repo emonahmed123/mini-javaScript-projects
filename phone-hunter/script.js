@@ -7,8 +7,9 @@ const loadPhone = async () => {
 
 const displayData = (phones) => {
 
-    console.log(phones)
-
+    phones.forEach(phone => {
+        console.log(phone)
+    })
 }
 
 
