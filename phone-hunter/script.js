@@ -19,6 +19,14 @@ const loadPhone = async (searchText) => {
 const displayData = phones => {
   const container = document.getElementById('phones-container');
   container.innerText = ''
+  const showAll = document.getElementById('show-all-container');
+
+  if (phones.length > 12) {
+    showAll.classList.remove("hidden")
+  }
+  else {
+    showAll.classList.add("hidden")
+  }
   phones = phones.slice(0, 5)
   phones.forEach(phone => {
 
@@ -44,16 +52,30 @@ const displayData = phones => {
     console.log(phoneCard)
     container.appendChild(phoneCard)
   });
-
+  togleLoading(false)
 }
 
 
 const handleSearch = () => {
+  togleLoading(true)
   const searchFeild = document.getElementById('search-Feild')
 
   const searchText = searchFeild.value;
   loadPhone(searchText)
 }
 
+const togleLoading = (isLoding) => {
 
+  const loadingSpiner = document.getElementById("loading")
+
+
+
+  if (isLoding) {
+    loadingSpiner.classList.remove("hidden")
+  }
+  else {
+    loadingSpiner.classList.add("hidden")
+  }
+
+}
 
