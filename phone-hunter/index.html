@@ -8,32 +8,42 @@
       rel="stylesheet"
       type="text/css"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
   <body>
-    <h2>Phone Hunting</h2>
-    <section>
-      <div id="phones-container" class="grid grid-cols-3 gap-y-5">
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure class="px-10 pt-10">
-            <img
-              src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-              class="rounded-xl"
-            />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
+    <main class="max-w-[1170px] mx-auto">
+      <h2 class="text-[30px] font-bold">Phone Hunting</h2>
+      <section>
+        <div class="py-5">
+          <input
+            id="search-Feild"
+            type="text"
+            placeholder="Type here"
+            class="input w-full max-w-xs"
+          />
+          <button onclick="handleSearch()" class="btn btn-primary">
+            Search
+          </button>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- 
+            search result 
+           -->
+
+      <section id="search-result"></section>
+      <section>
+        <div
+          id="phones-container"
+          class="grid grid-cols-3 gap-x-5 gap-y-5"
+        ></div>
+
+        <button id="show-all-container" class="btn btn-secondary hidden">
+          Secondary
+        </button>
+      </section>
+    </main>
     <script src="./script.js"></script>
   </body>
 </html>
