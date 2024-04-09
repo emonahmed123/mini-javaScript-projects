@@ -21,13 +21,21 @@ const displayData = (phones, showAlldata) => {
   container.innerText = ''
   const showAll = document.getElementById('show-all-container');
   console.log(showAlldata)
-  if (phones.length > 12) {
+  if (phones.length > 12 && !showAlldata) {
     showAll.classList.remove("hidden")
   }
   else {
     showAll.classList.add("hidden")
   }
-  phones = phones.slice(0, 5)
+
+  if (!showAlldata) {
+    phones = phones.slice(0, 5)
+  }
+  else {
+
+  }
+
+
   phones.forEach(phone => {
 
     const phoneCard = document.createElement("div");
@@ -46,7 +54,7 @@ const displayData = (phones, showAlldata) => {
         <h2 class="card-title">${phone.phone_name}</h2>
         <p>${phone.slug}</p>
         <div class="card-actions">
-          <button class="btn btn-primary">Buy Now</button>
+          <button onclick="handleShowDetail('${phone.slug}');my_modal_3.showModal()"class="btn btn-primary">Show Detail</button>
         </div>
       </div>`;
     console.log(phoneCard)
@@ -79,6 +87,16 @@ const togleLoading = (isLoding) => {
 
 }
 
+
+const handleShowDetail = async (id) => {
+  console.log('showdeatali', id)
+
+  const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
+  const data = await res.json();
+  const phoneDetails = data.data;
+
+
+}
 
 const handleShowAll = () => {
   handleSearch(true)
