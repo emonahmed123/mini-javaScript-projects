@@ -21,13 +21,21 @@ const displayData = (phones, showAlldata) => {
   container.innerText = ''
   const showAll = document.getElementById('show-all-container');
   console.log(showAlldata)
-  if (phones.length > 12) {
+  if (phones.length > 12 && !showAlldata) {
     showAll.classList.remove("hidden")
   }
   else {
     showAll.classList.add("hidden")
   }
-  phones = phones.slice(0, 5)
+
+  if (!showAlldata) {
+    phones = phones.slice(0, 5)
+  }
+  else {
+
+  }
+
+
   phones.forEach(phone => {
 
     const phoneCard = document.createElement("div");
