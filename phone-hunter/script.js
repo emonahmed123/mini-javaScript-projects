@@ -54,7 +54,7 @@ const displayData = (phones, showAlldata) => {
         <h2 class="card-title">${phone.phone_name}</h2>
         <p>${phone.slug}</p>
         <div class="card-actions">
-          <button class="btn btn-primary">Buy Now</button>
+          <button onclick="handleShowDetail('${phone.slug}')" class="btn btn-primary">Show Detail</button>
         </div>
       </div>`;
     console.log(phoneCard)
@@ -87,6 +87,15 @@ const togleLoading = (isLoding) => {
 
 }
 
+
+const handleShowDetail = async (id) => {
+  console.log('showdeatali', id)
+
+  const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
+  const data = await res.json();
+  console.log(data)
+
+}
 
 const handleShowAll = () => {
   handleSearch(true)
