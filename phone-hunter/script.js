@@ -54,7 +54,7 @@ const displayData = (phones, showAlldata) => {
         <h2 class="card-title">${phone.phone_name}</h2>
         <p>${phone.slug}</p>
         <div class="card-actions">
-          <button onclick="handleShowDetail('${phone.slug}')" class="btn btn-primary">Show Detail</button>
+          <button onclick="handleShowDetail('${phone.slug}');my_modal_3.showModal()"class="btn btn-primary">Show Detail</button>
         </div>
       </div>`;
     console.log(phoneCard)
@@ -93,7 +93,8 @@ const handleShowDetail = async (id) => {
 
   const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
   const data = await res.json();
-  console.log(data)
+  const phoneDetails = data.data;
+
 
 }
 
