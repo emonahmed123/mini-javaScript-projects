@@ -1,9 +1,9 @@
-const loadPhone = async (searchText) => {
+const loadPhone = async (searchText, showalldata) => {
   const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
   const data = await res.json()
   const phoneData = data.data
   console.log(phoneData)
-  displayData(phoneData)
+  displayData(phoneData, showalldata)
 }
 
 
@@ -16,11 +16,11 @@ const loadPhone = async (searchText) => {
 
 
 
-const displayData = phones => {
+const displayData = (phones, showAlldata) => {
   const container = document.getElementById('phones-container');
   container.innerText = ''
   const showAll = document.getElementById('show-all-container');
-
+  console.log(showAlldata)
   if (phones.length > 12) {
     showAll.classList.remove("hidden")
   }
@@ -56,12 +56,12 @@ const displayData = phones => {
 }
 
 
-const handleSearch = () => {
+const handleSearch = (showalldata) => {
   togleLoading(true)
   const searchFeild = document.getElementById('search-Feild')
 
   const searchText = searchFeild.value;
-  loadPhone(searchText)
+  loadPhone(searchText, showalldata)
 }
 
 const togleLoading = (isLoding) => {
@@ -77,5 +77,10 @@ const togleLoading = (isLoding) => {
     loadingSpiner.classList.add("hidden")
   }
 
+}
+
+
+const handleShowAll = () => {
+  handleSearch(true)
 }
 
